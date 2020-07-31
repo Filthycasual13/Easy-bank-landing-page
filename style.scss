@@ -326,9 +326,11 @@ footer {
     }
 
     #section-one {
+        position: relative;
         width: 100%;
         padding: 100px 0 0 0;
-    
+        overflow-x: hidden;
+        
         img {
             position: absolute;
             top: -325px;
@@ -341,7 +343,7 @@ footer {
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 450px 20px 50px 20px;
+            padding: 550px 20px 50px 20px;
             .text {
                 width: 480px;
     
