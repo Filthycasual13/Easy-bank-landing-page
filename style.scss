@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+$darkBlue: hsl(233, 26%, 24%);
+$limeGreen: hsl(136, 65%, 51%);
+$brightCyan: hsl(192, 70%, 51%);
+$limeGreenActive: hsl(136, 86%, 58%);
+$brightCyanActive: hsl(192, 98%, 60%);
+$grayishBlue: hsl(233, 8%, 62%);
+$lightGrayishBlue: hsl(220, 16%, 96%);
+$veryLightGray: hsl(0, 0%, 98%);
+$white: hsl(0, 0%, 100%);
+$mainFont: 'Public Sans', sans-serif;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $mainFont;
+    overflow-x: hidden;
+}
+
+.box input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+.box, .links-mobile, .about-mobile {
+    display: none;
+}
+
+.btn-invite {
+    color: $white;
+    background: linear-gradient(to right, $limeGreen, $brightCyan);
+    padding: 10px 25px 10px 25px;
+    border-radius: 20px;
+
+    &:hover {
+        background: linear-gradient(to right, $limeGreenActive, $brightCyanActive);
+    }
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 65px;
+    background-color: $white;
+    z-index: 1;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 350px;
+        color: $grayishBlue;
+        font-weight: 400;
+
+        li {
+            list-style-type: none;
+
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+    }
+}
+
+
+#section-one {
+    width: 100%;
+    padding: 100px 150px 0px 150px;
+
+    img {
+        position: absolute;
+        top: -325px;
+        left: 500px;
+        transform: scale(0.7);
+        z-index: -2;
+    }
+
+    #intro {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 100px;
+        .text {
+            width: 480px;
+
+            h1 {
+                font-size: 3em;
+                font-weight: 300;
+            }
+
+            p{
+                color: $grayishBlue;
+                font-size: 1.2em;
+                font-weight: 400;
+            }
+
+            .btn-invite {
+                width: 110px;
+            }
+        }
+
+         img {
+             position: absolute;
+             top: -150px;
+             left: 750px;
+        }
+    }
+}
+
+#section-two {
+    padding: 80px 150px 50px 150px;
+    background: $lightGrayishBlue;
+    
+    #why {
+        width: 60%;
+        padding-bottom: 40px;
+        h1 {
+            font-size: 2.8em;
+            font-weight: 300;
+        }
+
+        p{
+            color: $grayishBlue;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+    }
+
+    #features {
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        .feature {
+
+            h2 {
+                font-size: 1.5em;
+                font-weight: 300;
+            }
+    
+            p{
+                color: $grayishBlue;
+                font-size: 1em;
+                font-weight: 400;
+            }
+        }
+    }
+    
+}
+
+#section-three {
+    padding: 100px 150px 75px 150px;
+    background-color: $veryLightGray;
+    h1 {
+        font-size: 2.8em;
+        font-weight: 300;
+        padding-bottom: 20px;
+    }
+
+    #article {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+
+        .articles {
+            background-color: $white;
+            width: 250px;
+
+            img {
+                width: 250px;
+                height: 200px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                padding-bottom: 15px;
+            }
+
+            .author {
+                color: $grayishBlue;
+                font-size: 0.8em;
+                padding-bottom: 10px;
+            }
+
+            .title {
+                cursor: pointer;
+                font-size: 1.2em;
+                font-weight: 300;
+
+                &:hover {
+                    color: $limeGreen;
+                }
+            }
+
+            p {
+                color: $grayishBlue;
+                font-size: 1em;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 100px 150px 100px 0;
+    width: 100%;
+    background-color: $darkBlue;
+    color: $white;
+
+    #icons {
+        padding-top: 55px;
+
+        ion-icon {
+            font-size: 32px;
+            color: white;
+
+            &:hover {
+                color: $limeGreen;
+            }
+          }
+    }
+    
+    .about, .career {
+        p {
+            cursor: pointer;
+    
+            &:hover {
+                color: $limeGreen;
+            }
+        }
+    }
+
+    .link {
+        
+        p {
+            color: $grayishBlue;
+            font-size: 1em;
+        }
+
+        .btn-invite {
+            width: 110px;
+        }
+    }
+    
+    
+
+}
+
+@media only screen and (max-width: 650px) {
+
+    #nav {
+
+        .logo {
+            position: absolute;
+            left: 20px;
+        }
+
+        .links, .btn-invite {
+            display: none;
+        }
+    }
+
+    .box {
+        display: block;
+        position: absolute;
+        top: 25px;
+        right: 50px;
+        
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          width: 23px;
+          height: 23px;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: url(images/icon-hamburger.svg);
+          background-repeat: no-repeat;
+        }
+    
+        
+      }
+
+      .links-mobile {
+        visibility: hidden;
+        position: absolute;
+        left: 55px;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 300px;
+        height: 200px;
+        cursor: pointer;
+        background-color: $white;
+        border-radius: 5px;
+        z-index: 2;
+
+        ul {
+            position: relative;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            color: $grayishBlue;
+            height: 200px;
+            font-weight: 400;
+    
+            li {
+                list-style-type: none;
+                &:hover {
+                    color: $limeGreen;
+                }
+            }
+
+        }
+    }
+
+    #section-one {
+        width: 100%;
+        padding: 100px 0 0 0;
+    
+        img {
+            position: absolute;
+            top: -325px;
+            left: -550px;
+            transform: scale(0.7);
+            z-index: -2;
+        }
+    
+        #intro {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 450px 20px 50px 20px;
+            .text {
+                width: 480px;
+    
+                h1 {
+                    font-size: 3.1em;
+                    font-weight: 300;
+                }
+    
+                p{
+                    color: $grayishBlue;
+                    font-size: 1.3em;
+                    font-weight: 400;
+                }
+    
+                .btn-invite {
+                    position: relative;
+                    left: 100px;
+                    width: 110px;
+                }
+            }
+    
+             img {
+                 position: absolute;
+                 top: -150px;
+                 left: -150px;
+            }
+        }
+
+        @media only screen and (max-width:375px) {
+            img {
+                position: absolute;
+                top: -325px;
+                left: -550px;
+                transform: scale(0.7);
+                z-index: -2;
+            }
+        
+            #intro {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 450px 20px 50px 20px;
+                .text {
+                    width: 480px;
+        
+                    h1 {
+                        font-size: 2.5em;
+                        font-weight: 300;
+                    }
+        
+                    p{
+                        color: $grayishBlue;
+                        font-size: 1.3em;
+                        font-weight: 400;
+                    }
+        
+                    .btn-invite {
+                        position: relative;
+                        left: 80px;
+                        width: 110px;
+                    }
+                }
+        
+                 img {
+                     position: absolute;
+                     top: -150px;
+                     left: -150px;
+                }
+            }
+        }
+        @media only screen and (min-width:550px) {
+            img {
+                position: absolute;
+                top: -325px;
+                left: -250px;
+                transform: scale(0.7);
+                z-index: -2;
+            }
+        
+            #intro {
+                padding: 450px 20px 50px 50px;
+                .text {
+                    width: 480px;
+                    display: flex;
+                    flex-direction: column;
+                    text-align: center;
+
+        
+                    h1 {
+                        font-size: 3.1em;
+                        font-weight: 300;
+                    }
+        
+                    p{
+                        color: $grayishBlue;
+                        font-size: 1.3em;
+                        font-weight: 400;
+                    }
+        
+                    .btn-invite {
+                        position: relative;
+                        left: 150px;
+                        width: 110px;
+                    }
+                }
+        
+                 img {
+                     position: absolute;
+                     top: -150px;
+                     left: -90px;
+                }
+            }
+        }
+    }
+
+    #section-two {
+        padding: 80px 25px 50px 25px;
+        background: $lightGrayishBlue;
+        
+        #why {
+            width: 100%;
+            padding-bottom: 40px;
+            text-align: center;
+            h1 {
+                font-size: 2.8em;
+                font-weight: 300;
+            }
+    
+            p{
+                color: $grayishBlue;
+                font-size: 1.2em;
+                font-weight: 400;
+            }
+        }
+    
+        #features {
+            display: grid;
+            gap: 80px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+    
+            .feature {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-items: center;
+                text-align: center;
+    
+                h2 {
+                    font-size: 1.6em;
+                    font-weight: 300;
+                }
+        
+                p{
+                    color: $grayishBlue;
+                    font-size: 1.1em;
+                    font-weight: 400;
+                }
+            }
+        }
+        
+    }
+
+    #section-three {
+        padding: 100px 20px 75px 20px;
+        background-color: $veryLightGray;
+        h1 {
+            font-size: 2.8em;
+            font-weight: 300;
+            padding-bottom: 20px;
+        }
+    
+        #article {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+    
+            .articles {
+                background-color: $white;
+                width: 100%;
+    
+                img {
+                    width: 100%;
+                    height: 300px;
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    padding-bottom: 15px;
+                }
+    
+                .author {
+                    color: $grayishBlue;
+                    font-size: 0.9em;
+                    padding-left: 10px;
+                }
+    
+                .title {
+                    cursor: pointer;
+                    font-size: 1.4em;
+                    font-weight: 300;
+                    padding-left: 10px;
+    
+                    &:hover {
+                        color: $limeGreen;
+                    }
+                }
+    
+                p {
+                    color: $grayishBlue;
+                    font-size: 1.1em;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: space-evenly;
+        padding: 100px 0 50px 0;
+        width: 100%;
+        background-color: $darkBlue;
+        color: $white;
+    
+        #icons {
+            padding-top: 55px;
+    
+            ion-icon {
+                font-size: 32px;
+                color: white;
+    
+                &:hover {
+                    color: $limeGreen;
+                }
+              }
+        }
+        
+        .about, .career {
+            display: none;
+        }
+
+        .about-mobile {
+            display: block;
+            padding-bottom: 20px;
+            p {
+                cursor: pointer;
+                text-align: center;
+        
+                &:hover {
+                    color: $limeGreen;
+                }
+            }
+        }
+    
+        .link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            
+            p {
+                color: $grayishBlue;
+                font-size: 1em;
+            }
+    
+            .btn-invite {
+                width: 110px;
+            }
+        }
+    
+    }
+    
+}
